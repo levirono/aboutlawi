@@ -1,66 +1,10 @@
 @import "tailwindcss";
 
-/* ─── Monochrome Design System ─────────────────────────────────────────────
-   Strictly grayscale — zero colorful values anywhere in this file.
-   All tokens map to zinc-scale equivalents per AGENTS.md § 3.
-   ──────────────────────────────────────────────────────────────────────── */
+/*
+ * Theme tokens (Tailwind v4 has no tailwind.config file; the theme lives here).
+ * Colours come from Tailwind's built-in zinc scale only; there are no custom colour values.
+ */
 @theme inline {
-  /* Semantic surface tokens */
-  --color-background:   var(--background);
-  --color-foreground:   var(--foreground);
-  --color-muted:        var(--muted);
-  --color-muted-fg:     var(--muted-fg);
-  --color-border:       var(--border);
-  --color-card:         var(--card);
-  --color-card-fg:      var(--card-fg);
-
-  /* Typography */
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-}
-
-/* ─── Light mode ────────────────────────────────────────────────────────── */
-:root {
-  --background:  #fafafa;   /* zinc-50  */
-  --foreground:  #18181b;   /* zinc-900 */
-  --muted:       #a1a1aa;   /* zinc-400 */
-  --muted-fg:    #71717a;   /* zinc-500 */
-  --border:      #e4e4e7;   /* zinc-200 */
-  --card:        #ffffff;   /* white    */
-  --card-fg:     #18181b;   /* zinc-900 */
-}
-
-/* ─── Dark mode ─────────────────────────────────────────────────────────── */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background:  #09090b;   /* zinc-950 */
-    --foreground:  #fafafa;   /* zinc-50  */
-    --muted:       #71717a;   /* zinc-500 */
-    --muted-fg:    #a1a1aa;   /* zinc-400 */
-    --border:      #27272a;   /* zinc-800 */
-    --card:        #18181b;   /* zinc-900 */
-    --card-fg:     #fafafa;   /* zinc-50  */
-  }
-}
-
-/* ─── Base resets ───────────────────────────────────────────────────────── */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
-  min-height: 100dvh;
 }
